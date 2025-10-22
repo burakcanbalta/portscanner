@@ -1,5 +1,11 @@
-nmap
-requests
-colorama
-tabulate
-tk
+# Gerekli paketleri yükle
+pip install requests python-nmap
+
+# Basit tarama
+python scanner.py 192.168.1.1 -p 1-1000 -t 200
+
+# Detaylı tarama
+python scanner.py example.com -p 80,443,8080 -sV -w -o sonuc.txt
+
+# GUI modu
+python scanner.py --gui
